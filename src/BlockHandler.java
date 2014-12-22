@@ -1,7 +1,7 @@
 /**
  * Created by patrick on 18.12.14.
  */
-public class SteinHandler {
+public class BlockHandler {
 
     // spawnen von Steinen (while != gameover)
 

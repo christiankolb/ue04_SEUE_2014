@@ -5,9 +5,9 @@ public class GameApp {
 
     public static void main(String[] args){
 
-        Feld feld = new Feld();
+        Field field = new Field();
 
-        SteinHandler handler = new SteinHandler();
+        BlockHandler handler = new BlockHandler();
 
     }
 }

@@ -1,29 +1,29 @@
 /**
  * Created by patrick on 22.12.14.
  */
-public class Stein_O extends Stein {
+public class Block_L extends Block {
     @Override
-    public boolean bewegungR() {
+    public boolean moveRight() {
         return false;
     }
 
     @Override
-    public boolean bewegungL() {
+    public boolean moveLeft() {
         return false;
     }
 
     @Override
-    public boolean bewegungAbw() {
+    public boolean moveDown() {
         return false;
     }
 
     @Override
-    public boolean drehungR() {
+    public boolean rotateRight() {
         return false;
     }
 
     @Override
-    public boolean drehungL() {
+    public boolean rotateLeft() {
         return false;
     }
 }
