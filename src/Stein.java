@@ -5,6 +5,7 @@ public abstract class Stein {
 
     private Quadrat[] quadrate;
     private int ausrichtung = 0;
+    private Form form;
 
     public abstract boolean bewegungR();
 

@@ -9,10 +9,10 @@ public class Feld {
     private final int TOTAL_HEIGHT = 24;
     private final int HEIGHT = 20;
     private final int WIDTH = 10;
-    private Stein[][] field;
+    private Quadrat[][] feld;
 
     public Feld(){
 
-        field = new Stein[10][24];
+        feld = new Quadrat[10][24];
     }
 }
