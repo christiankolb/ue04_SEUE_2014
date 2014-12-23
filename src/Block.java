@@ -51,8 +51,11 @@ public abstract class Block {
         }
     }
 
-    public void finalizeBlock(){
-
+    public void finalizeBlock(Field field){
+        for(int i = 0; i < cell.length; i++){
+            field.setCell(cell[i]);
+        }
+        field.deleteFullRows();
     }
 
 }

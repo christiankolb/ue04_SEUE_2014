@@ -11,8 +11,7 @@ public class Field {
     private Cell[][] field;
 
     public Field(){
-
-        field = new Cell[10][24];
+        field = new Cell[WIDTH][TOTAL_HEIGHT];
     }
 
     public boolean isNewPositionValid(Cell[] cell){
@@ -33,6 +32,54 @@ public class Field {
             return false;
         }else{
             return true;
+        }
+    }
+
+    public void setCell(Cell cell){
+        field[cell.getX()][convertY(cell.getY())] = cell;
+    }
+
+    public void deleteFullRows(){
+        boolean rowFull = false;
+        for(int i = 0; i < HEIGHT; i++){
+            for(int j = 0; j < WIDTH; j++){
+                if(field[i][j] == null){
+                    rowFull = false;
+                    break;
+                }else{
+                    rowFull = true;
+                }
+            }
+            if(rowFull){
+                deleteRow(i);
+            }
+        }
+        if(rowFull){
+            moveUp();
+        }
+    }
+
+    private void deleteRow(int row){
+        for(int i = 0; i < WIDTH; i++){
+            field[row][i] = null;
+        }
+    }
+
+    /////////nachrücken von steinen -> wenn reihen gelöscht wurden
+    private void moveUp(){
+        boolean rowEmpty = false;
+        for(int i = HEIGHT-1; i >= 0; i--){
+            for(int j = 0; j < WIDTH; j++){
+                if(field[i][j] != null){
+                    rowEmpty = false;
+                    break;
+                }else{
+                    rowEmpty = true;
+                }
+            }
+            if(rowEmpty){
+
+            }
         }
     }
 
