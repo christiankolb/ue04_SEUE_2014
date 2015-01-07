@@ -3,13 +3,34 @@
  */
 public abstract class Block {
 
-    protected Cell[] cell;
+    protected boolean[][] squares;
     protected int rotation = 0;
 
-    public abstract boolean rotateRight(Field field);
-    public abstract boolean rotateLeft(Field field);
+    public boolean moveRight(){
+        return false;
+    }
 
-    public boolean moveRight(Field field) {
+    public boolean moveLeft(){
+        return true;
+    }
+
+    public boolean moveDown(){
+        return true;
+    }
+
+    public boolean rotateRight(){
+        return true;
+    }
+
+    public boolean rotateLeft(){
+        return true;
+    }
+
+
+
+    /////////// zum anregungen holen /////////
+
+  /*  public boolean moveRight(Field field) {
         for(int i = 0; i < cell.length; i++){
             cell[i].setX(cell[i].getX()+1);
         }
@@ -57,5 +78,11 @@ public abstract class Block {
         }
         field.deleteFullRows();
     }
+
+    protected void setCoordinates(int cellNo, int x, int y){
+        cell[cellNo].setX(x);
+        cell[cellNo].setY(y);
+    }
+    */
 
 }

@@ -3,13 +3,21 @@
  */
 public class Block_O extends Block {
 
+    public Block_O(){
+        squares = new boolean[2][2];
+        squares[0][0] = true;
+        squares[0][1] = true;
+        squares[1][0] = true;
+        squares[1][1] = true;
+    }
+
     @Override
-    public boolean rotateRight(Field field) {
+    public boolean rotateRight() {
         return true;
     }
 
     @Override
-    public boolean rotateLeft(Field field) {
+    public boolean rotateLeft() {
         return true;
     }
 }

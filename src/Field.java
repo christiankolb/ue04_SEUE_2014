@@ -8,8 +8,9 @@ public class Field {
     private final int TOTAL_HEIGHT = 24;
     private final int HEIGHT = 20;
     private final int WIDTH = 10;
-    private Cell[][] field;
+    private cell[][] field;
 
+    /*
     public Field(){
         field = new Cell[WIDTH][TOTAL_HEIGHT];
     }
@@ -65,7 +66,7 @@ public class Field {
         }
     }
 
-    /////////nachrücken von steinen -> wenn reihen gelöscht wurden
+    /////////nachrücken von steinen -> wenn reihen gelöscht wurden... nicht fertig
     private void moveUp(){
         boolean rowEmpty = false;
         for(int i = HEIGHT-1; i >= 0; i--){
@@ -87,4 +88,13 @@ public class Field {
         return TOTAL_HEIGHT - y;
     }
 
+
+    public boolean isCellEmpty(int x, int y){
+        if(field[x][convertY(y)]==null){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    */
 }

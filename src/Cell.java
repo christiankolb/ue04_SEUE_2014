@@ -1,34 +1,29 @@
 /**
- * Created by patrick on 22.12.14.
+ * Created by patrick on 07.01.15.
  */
 public class Cell {
 
-    private int x;
-    private int y;
-    private Shape shape;
+    private Shape s;
+    private boolean isFull;
 
-    public Cell(Shape shape){
-        this.shape = shape;
+    public Cell(){
+
+    }
+
+    public void setShape(Shape s){
+        this.s = s;
     }
 
     public Shape getShape(){
-        return this.shape;
+
     }
 
-    public int getX(){
-        return x;
+    public void setIsFull(){
+        isFull = true;
     }
 
-    public int getY(){
-        return y;
-    }
-
-    public void setX(int x){
-        this.x = x;
-    }
-
-    public void setY(int y){
-        this.y = y;
+    public boolean getIsFull(){
+        return isFull;
     }
 
 

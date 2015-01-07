@@ -3,28 +3,10 @@
  */
 public class Block_T extends Block {
 
-    @Override
-    public boolean moveRight() {
-        return false;
+    public Block_T() {
+        squares = new boolean[3][3];
+        squares[0][0] = false;
+        //..... alle squares ausfüllen
     }
 
-    @Override
-    public boolean moveLeft() {
-        return false;
-    }
-
-    @Override
-    public boolean moveDown() {
-        return false;
-    }
-
-    @Override
-    public boolean rotateRight() {
-        return false;
-    }
-
-    @Override
-    public boolean rotateLeft() {
-        return false;
-    }
 }
