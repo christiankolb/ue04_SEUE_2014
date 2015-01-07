@@ -6,6 +6,7 @@ public abstract class Block {
     protected boolean[][] squares;
     protected int rotation = 0;
 
+    /* soll vom handler übernommen werden
     public boolean moveRight(){
         return false;
     }
@@ -17,6 +18,7 @@ public abstract class Block {
     public boolean moveDown(){
         return true;
     }
+    */
 
     public boolean rotateRight(){
         return true;
@@ -24,6 +26,22 @@ public abstract class Block {
 
     public boolean rotateLeft(){
         return true;
+    }
+
+    //// zu testzwecken ////
+
+    public void printBlock(){
+        System.out.println();
+        for(int i = 0; i < squares.length; i++){
+            System.out.println();
+            for(int j = 0; j < squares.length; j++){
+                if(squares[i][j] == false) {
+                    System.out.print("o");
+                }else{
+                    System.out.print("x");
+                }
+            }
+        }
     }
 
 
