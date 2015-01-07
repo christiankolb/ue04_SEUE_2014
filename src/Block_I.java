@@ -3,23 +3,23 @@
  */
 public class Block_I extends Block {
 
-    public Block_I() {
-        squares = new boolean[4][4];
-        squares[0][0] = false;
-        squares[0][1] = true;
-        squares[0][2] = false;
-        squares[0][3] = false;
-        squares[1][0] = false;
-        squares[1][1] = true;
-        squares[1][2] = false;
-        squares[1][3] = false;
-        squares[2][0] = false;
-        squares[2][1] = true;
-        squares[2][2] = false;
-        squares[2][3] = false;
-        squares[3][0] = false;
-        squares[3][1] = true;
-        squares[3][2] = false;
-        squares[3][3] = false;
+    public Block_I(){
+        block = new boolean[4][4];
+        block[0][0] = false;
+        block[0][1] = true;
+        block[0][2] = false;
+        block[0][3] = false;
+        block[1][0] = false;
+        block[1][1] = true;
+        block[1][2] = false;
+        block[1][3] = false;
+        block[2][0] = false;
+        block[2][1] = true;
+        block[2][2] = false;
+        block[2][3] = false;
+        block[3][0] = false;
+        block[3][1] = true;
+        block[3][2] = false;
+        block[3][3] = false;
     }
 }

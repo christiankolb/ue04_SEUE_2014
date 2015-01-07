@@ -4,20 +4,21 @@
 public class Block_O extends Block {
 
     public Block_O(){
-        squares = new boolean[2][2];
-        squares[0][0] = true;
-        squares[0][1] = true;
-        squares[1][0] = true;
-        squares[1][1] = true;
+        block = new boolean[2][2];
+        block[0][0] = true;
+        block[0][1] = true;
+        block[1][0] = true;
+        block[1][1] = true;
     }
 
+    // keine drehung notwending
     @Override
-    public boolean rotateRight() {
-        return true;
+    public void rotateRight() {
+
     }
 
+    // keine drehung notwending
     @Override
-    public boolean rotateLeft() {
-        return true;
+    public void rotateLeft() {
     }
 }

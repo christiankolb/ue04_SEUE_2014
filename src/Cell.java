@@ -4,10 +4,10 @@
 public class Cell {
 
     private Shape s;
-    private boolean isFull;
+    private boolean isEmpty;
 
     public Cell(){
-
+        isEmpty = true;
     }
 
     public void setShape(Shape s){
@@ -18,15 +18,12 @@ public class Cell {
         return s;
     }
 
-    public void setIsFull(){
-        isFull = true;
+    public void setFull(){
+        isEmpty = false;
     }
 
-    public boolean getIsFull(){
-        return isFull;
+    public boolean getIsEmpty(){
+        return isEmpty;
     }
-
-
-
 
 }

@@ -3,17 +3,17 @@
  */
 public class Block_L extends Block {
 
-    public Block_L() {
-        squares = new boolean[3][3];
-        squares = new boolean[3][3];
-        squares[0][0] = false;
-        squares[0][1] = true;
-        squares[0][2] = false;
-        squares[1][0] = false;
-        squares[1][1] = true;
-        squares[1][2] = false;
-        squares[2][0] = false;
-        squares[2][1] = true;
-        squares[2][2] = true;
+    public Block_L(){
+        block = new boolean[3][3];
+        block = new boolean[3][3];
+        block[0][0] = false;
+        block[0][1] = true;
+        block[0][2] = false;
+        block[1][0] = false;
+        block[1][1] = true;
+        block[1][2] = false;
+        block[2][0] = false;
+        block[2][1] = true;
+        block[2][2] = true;
     }
 }

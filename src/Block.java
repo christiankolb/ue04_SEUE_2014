@@ -3,39 +3,45 @@
  */
 public abstract class Block {
 
-    protected boolean[][] squares;
-    protected int rotation = 0;
+    protected boolean[][] block;
 
-    /* soll vom handler übernommen werden
-    public boolean moveRight(){
-        return false;
+    public Block(){
+
     }
 
-    public boolean moveLeft(){
-        return true;
+    // dreht das array 90° nach rechts
+    public void rotateRight(){
+        boolean[][] rotated = new boolean[block.length][block.length];
+
+        for(int i = 0; i < block.length; i++){
+            for(int j = 0; j < block.length; j++){
+                rotated[i][j] = block[block.length-j-1][i];
+            }
+        }
+        block = rotated;
     }
 
-    public boolean moveDown(){
-        return true;
-    }
-    */
 
-    public boolean rotateRight(){
-        return true;
+    // dreht das array 90° nach links
+    public void rotateLeft(){
+        boolean[][] rotated = new boolean[block.length][block.length];
+
+        for(int i = block.length-1; i >= 0; i--){
+            for(int j = block.length-1; j >= 0; j--){
+                rotated[i][j] = block[j][block.length-i-1];
+            }
+        }
+        block = rotated;
     }
 
-    public boolean rotateLeft(){
-        return true;
-    }
 
     //// zu testzwecken ////
-
     public void printBlock(){
         System.out.println();
-        for(int i = 0; i < squares.length; i++){
+        for(int i = 0; i < block.length; i++){
             System.out.println();
-            for(int j = 0; j < squares.length; j++){
-                if(squares[i][j] == false) {
+            for(int j = 0; j < block.length; j++){
+                if(block[i][j] == false) {
                     System.out.print("o");
                 }else{
                     System.out.print("x");
@@ -43,64 +49,5 @@ public abstract class Block {
             }
         }
     }
-
-
-
-    /////////// zum anregungen holen /////////
-
-  /*  public boolean moveRight(Field field) {
-        for(int i = 0; i < cell.length; i++){
-            cell[i].setX(cell[i].getX()+1);
-        }
-        if(!field.isNewPositionValid(cell)){
-            for(int i = 0; i < cell.length; i++){
-                cell[i].setX(cell[i].getX()-1);
-            }
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public boolean moveLeft(Field field) {
-        for(int i = 0; i < cell.length; i++){
-            cell[i].setX(cell[i].getX()-1);
-        }
-        if(!field.isNewPositionValid(cell)){
-            for(int i = 0; i < cell.length; i++) {
-                cell[i].setX(cell[i].getX()+1);
-            }
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public boolean moveDown(Field field) {
-        for(int i = 0; i < cell.length; i++){
-            cell[i].setY(cell[i].getY()-1);
-        }
-        if(!field.isNewPositionValid(cell)){
-            for(int i = 0; i < cell.length; i++){
-                cell[i].setY(cell[i].getY()+1);
-            }
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public void finalizeBlock(Field field){
-        for(int i = 0; i < cell.length; i++){
-            field.setCell(cell[i]);
-        }
-        field.deleteFullRows();
-    }
-
-    protected void setCoordinates(int cellNo, int x, int y){
-        cell[cellNo].setX(x);
-        cell[cellNo].setY(y);
-    }
-    */
 
 }

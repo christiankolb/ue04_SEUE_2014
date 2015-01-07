@@ -11,11 +11,33 @@ public class Field {
     private Cell[][] field;
 
 
-    ///////// Anregungen
-    /*
     public Field(){
         field = new Cell[WIDTH][TOTAL_HEIGHT];
+        for(int i = 0; i < WIDTH; i++){
+            for(int j = 0; i < TOTAL_HEIGHT; j++){
+                field[i][j] = new Cell();
+            }
+        }
     }
+
+    public boolean isCellEmpty(int x, int y){
+        return field[x][y].getIsEmpty();
+    }
+
+    public void deleteFullRows(){
+        //TODO implementieren
+    }
+
+    // array wird normalerweise von oben nach unten abgearbeitet, tetris von unten nach oben -> methode ev hilfreich
+    private int convertY(int y){
+        return TOTAL_HEIGHT - y;
+    }
+
+
+
+    ///////// Anregungen
+    /*
+
 
     public boolean isNewPositionValid(Cell[] cell){
         for(int i = 0; i < cell.length; i++){
@@ -85,11 +107,6 @@ public class Field {
             }
         }
     }
-
-    private int convertY(int y){
-        return TOTAL_HEIGHT - y;
-    }
-
 
     public boolean isCellEmpty(int x, int y){
         if(field[x][convertY(y)]==null){

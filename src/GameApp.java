@@ -6,9 +6,11 @@ public class GameApp {
     public static void main(String[] args){
         //field
         //blockhandler
-
         //while != gameover
 
+
+
+        //just some testing here
         Block i = new Block_I();
         Block j = new Block_J();
         Block l = new Block_L();
@@ -24,6 +26,6 @@ public class GameApp {
         s.printBlock();
         t.printBlock();
         z.printBlock();
-    }
 
+    }
 }
