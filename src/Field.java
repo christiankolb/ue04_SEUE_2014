@@ -8,8 +8,10 @@ public class Field {
     private final int TOTAL_HEIGHT = 24;
     private final int HEIGHT = 20;
     private final int WIDTH = 10;
-    private cell[][] field;
+    private Cell[][] field;
 
+
+    ///////// Anregungen
     /*
     public Field(){
         field = new Cell[WIDTH][TOTAL_HEIGHT];

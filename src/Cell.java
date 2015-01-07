@@ -15,7 +15,7 @@ public class Cell {
     }
 
     public Shape getShape(){
-
+        return s;
     }
 
     public void setIsFull(){
