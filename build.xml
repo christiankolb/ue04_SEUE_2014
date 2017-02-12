@@ -1,4 +1,5 @@
 <project name="MyProject" default="dist" basedir=".">
+  <javac includeantruntime="false" ...>...</javac>
   <description>
     simple example build file
   </description>
