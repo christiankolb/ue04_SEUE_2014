@@ -1,4 +1,3 @@
 ue04
 ====
-
-nothing special. just se homework :)
+A fork of our SE homework for some testing purposes.
