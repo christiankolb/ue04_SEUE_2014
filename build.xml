@@ -1,5 +1,4 @@
 <project name="MyProject" default="dist" basedir=".">
-  <javac includeantruntime="false"></javac>
   <description>
     simple example build file
   </description>
@@ -18,7 +17,7 @@
   <target name="compile" depends="init"
         description="compile the source">
     <!-- Compile the java code from ${src} into ${build} -->
-    <javac srcdir="${src}" destdir="${build}"/>
+    <javac includeantruntime="false" srcdir="${src}" destdir="${build}"/>
   </target>
 
   <target name="dist" depends="compile"
